@@ -12,17 +12,17 @@ const  app = express();
 
 //middlewhare
 app.use(cors());
+app.use(express.json());
 
 
 dbConnetion();
 
-app.get('/',(req,res)=>{
+//routes
+app.use('/api/usuarios',require('./routes/usuarios'))
+app.use('/api/login',require('./routes/login'))
 
-    res.json({
-        ok:true,
-        msg:"hola mundo"
-    });
-} );
+
+
 
 
 app.listen(process.env.PORT);
