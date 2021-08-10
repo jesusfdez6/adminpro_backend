@@ -18,8 +18,13 @@ app.use(express.json());
 dbConnetion();
 
 //routes
-app.use('/api/usuarios',require('./routes/usuarios'))
-app.use('/api/login',require('./routes/login'))
+app.use('/api/usuarios',require('./routes/usuarios'));
+app.use('/api/login',require('./routes/login'));
+app.use('/api/hospital',require('./routes/hospital'));
+app.use('/api/medicos',require('./routes/medicos'));
+
+
+
 
 
 
